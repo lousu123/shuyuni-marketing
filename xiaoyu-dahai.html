@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小渔大海水产火锅(梅江店) · 升级营销方案</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+:root {
+  --navy: #0B2B3C;
+  --teal: #2A9D8F;
+  --coral: #E76F51;
+  --gold: #E9C46A;
+  --cream: #FFF8F0;
+  --dark: #1A1A2E;
+  --text: #2D3436;
+  --text-light: #636E72;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans SC', -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.8;
+}
+/* Hero */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--navy) 0%, #0D3B4C 40%, #1A5A5A 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,157,143,0.15) 0%, transparent 70%);
+  top: -100px; right: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(231,111,81,0.1) 0%, transparent 70%);
+  bottom: -50px; left: -50px;
+  animation: float 6s ease-in-out infinite reverse;
+}
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.1); }
+}
+.hero-content { text-align: center; z-index: 1; padding: 2rem; max-width: 900px; }
+.hero-badge {
+  display: inline-block;
+  background: rgba(233,196,74,0.2);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.4rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: #fff;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.hero h1 span { color: var(--gold); }
+.hero .subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: rgba(255,255,255,0.7);
+  margin-top: 1rem;
+  letter-spacing: 4px;
+}
+.hero-stars { margin: 1.5rem 0; color: var(--gold); font-size: 1.8rem; letter-spacing: 4px; }
+.hero-info {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.hero-info span {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+.hero-cta {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--coral), #E85D04);
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(231,111,81,0.4);
+}
+.hero-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(231,111,81,0.6); }
+/* Navigation */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(11,43,60,0.95);
+  backdrop-filter: blur(20px);
+  padding: 0.8rem 1rem;
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+nav a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+nav a:hover, nav a.active { color: var(--gold); background: rgba(233,196,74,0.1); }
+/* Sections */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; left: 0;
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, var(--coral), var(--gold));
+  border-radius: 2px;
+}
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 1rem 0 2.5rem;
+  max-width: 600px;
+}
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  transition: all 0.3s;
+  border: 1px solid rgba(0,0,0,0.04);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(180deg, var(--teal), var(--coral));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+.card:hover::before { opacity: 1; }
+.card-icon { font-size: 2rem; margin-bottom: 1rem; }
+.card h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 0.8rem; }
+.card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+.card .tag {
+  display: inline-block;
+  background: rgba(42,157,143,0.1);
+  color: var(--teal);
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin-top: 0.8rem;
+}
+/* Steps Timeline */
+.timeline { position: relative; padding-left: 3rem; margin-top: 2rem; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--teal), var(--coral), var(--gold));
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.timeline-item::before {
+  content: attr(data-step);
+  position: absolute;
+  left: -2.3rem;
+  top: 1.5rem;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.timeline-item:nth-child(2)::before { background: var(--coral); }
+.timeline-item:nth-child(3)::before { background: var(--gold); color: var(--navy); }
+.timeline-item h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; }
+.timeline-item p { font-size: 0.9rem; color: var(--text-light); }
+.timeline-item ul { margin-top: 0.8rem; padding-left: 1.2rem; }
+.timeline-item li { font-size: 0.88rem; color: var(--text-light); margin-bottom: 0.3rem; }
+/* Data Display */
+.data-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.data-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.data-number {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--navy), var(--teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.data-label { font-size: 0.85rem; color: var(--text-light); margin-top: 0.3rem; }
+/* Table Alternative (Cards) */
+.feature-list { margin-top: 2rem; }
+.feature-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.3s;
+}
+.feature-item:hover { transform: translateX(5px); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.feature-num {
+  min-width: 36px; height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--navy));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.feature-item:nth-child(2) .feature-num { background: linear-gradient(135deg, var(--coral), var(--gold)); }
+.feature-content h4 { font-size: 1rem; color: var(--navy); margin-bottom: 0.3rem; }
+.feature-content p { font-size: 0.85rem; color: var(--text-light); }
+/* Pricing Table */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.pricing-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.3s;
+  position: relative;
+}
+.pricing-card.featured {
+  border: 2px solid var(--coral);
+  transform: scale(1.03);
+}
+.pricing-card.featured::before {
+  content: '主推';
+  position: absolute;
+  top: -12px; right: 20px;
+  background: linear-gradient(135deg, var(--coral), #E85D04);
+  color: #fff;
+  padding: 0.2rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.pricing-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.pricing-card.featured:hover { transform: scale(1.03) translateY(-5px); }
+.pricing-name { font-size: 1.1rem; color: var(--navy); font-weight: 600; }
+.pricing-price { font-family: 'Noto Serif SC', serif; font-size: 2.5rem; font-weight: 900; color: var(--coral); margin: 1rem 0; }
+.pricing-price small { font-size: 1rem; color: var(--text-light); font-weight: 400; }
+.pricing-desc { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.2rem; }
+.pricing-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; justify-content: center; }
+.pricing-tags span {
+  background: rgba(42,157,143,0.1);
+  color: var(--teal);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.72rem;
+}
+/* KPI Bar */
+.kpi-bar {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+.kpi-item { margin-bottom: 1.5rem; }
+.kpi-item:last-child { margin-bottom: 0; }
+.kpi-label { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.5rem; }
+.kpi-track { height: 8px; background: #f0f0f0; border-radius: 10px; overflow: hidden; }
+.kpi-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--teal), var(--coral));
+  transition: width 0.3s;
+}
+/* Footer */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 0.85rem;
+}
+footer strong { color: var(--gold); }
+/* Mobile */
+@media (max-width: 768px) {
+  .section { padding: 3rem 1.2rem; }
+  .pricing-card.featured { transform: none; }
+  .pricing-card.featured:hover { transform: translateY(-5px); }
+  .timeline { padding-left: 2.5rem; }
+  .timeline-item { padding: 1.2rem 1.2rem; }
+  nav { gap: 0.2rem; }
+  nav a { font-size: 0.7rem; padding: 0.3rem 0.5rem; }
+}
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🐟 美团智能收银 · 赋能升级方案</div>
+    <h1>小渔大海<br><span>水产火锅</span></h1>
+    <div class="hero-subtitle">梅江店 · 升级营销全案</div>
+    <div class="hero-stars">★★★★☆ <span style="font-size:1.2rem;color:rgba(255,255,255,0.6);margin-left:0.5rem;">4.6</span></div>
+    <div class="hero-info">
+      <span>📍 梅江会展中心 · 大岛商业广场3楼</span>
+      <span>💰 ¥114/人</span>
+      <span>🦐 海鲜火锅</span>
+      <span>🏆 评分4.6</span>
+    </div>
+    <a href="#overview" class="hero-cta">查看完整方案 ↓</a>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav>
+  <a href="#overview">门店诊断</a>
+  <a href="#pos">收银赋能</a>
+  <a href="#strategy">策略框架</a>
+  <a href="#group">团购运营</a>
+  <a href="#private">私域会员</a>
+  <a href="#season">淡季破局</a>
+  <a href="#budget">预算KPI</a>
+  <a href="#summary">总结</a>
+</nav>
+
+<!-- SECTION 1: 门店诊断 -->
+<section id="overview" class="section">
+  <h2 class="section-title">🔍 门店诊断分析</h2>
+  <p class="section-subtitle">基于当前数据对门店进行全面诊断，定位升级方向</p>
+
+  <div class="data-row">
+    <div class="data-item">
+      <div class="data-number">4.6</div>
+      <div class="data-label">当前评分 · 全市前列</div>
+    </div>
+    <div class="data-item">
+      <div class="data-number">¥114</div>
+      <div class="data-label">人均消费 · 中高端定位</div>
+    </div>
+    <div class="data-item">
+      <div class="data-number">★★★★☆</div>
+      <div class="data-label">星级评价 · 优秀但可精进</div>
+    </div>
+    <div class="data-item">
+      <div class="data-number">梅江</div>
+      <div class="data-label">核心区域 · 高端住宅商圈</div>
+    </div>
+  </div>
+
+  <div class="card-grid" style="margin-top:2rem;">
+    <div class="card">
+      <div class="card-icon">✅</div>
+      <h3>优势 Strengths</h3>
+      <p>评分4.6已属优秀，口碑基础扎实；海鲜火锅品类差异化强；梅江区域消费力高；大岛商业广场自带客流。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚠️</div>
+      <h3>劣势 Weaknesses</h3>
+      <p>海鲜火锅季节性明显（冬季旺季/夏季淡季）；3楼位置不如底商显眼；客单价¥114偏高，复购门槛大。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🚀</div>
+      <h3>机会 Opportunities</h3>
+      <p>智能收银系统降本增效；私域会员锁客提升复购；夏季推"冰镇海鲜+啤酒"破局；点评/抖音内容种草。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🛡️</div>
+      <h3>威胁 Threats</h3>
+      <p>梅江区域火锅竞争激烈（海底捞等连锁品牌）；海鲜供应链价格波动；消费者对海鲜新鲜度敏感度高。</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: 美团智能收银 -->
+<section id="pos" class="section" style="background:linear-gradient(180deg, var(--cream) 0%, #fff 100%);border-radius:40px 40px 0 0;">
+  <h2 class="section-title">🧾 美团智能收银 · 8大模块深度赋能</h2>
+  <p class="section-subtitle">针对海鲜火锅品类特性，定制收银系统落地方案</p>
+
+  <div class="feature-list">
+    <div class="feature-item">
+      <div class="feature-num">1</div>
+      <div class="feature-content">
+        <h4>扫码点餐 · 海鲜称重视觉化</h4>
+        <p>顾客入座扫码→进入海鲜活鲜展示页（带图/斤两/做法推荐）→自选海鲜称重后下单。减少点餐员1-2人，月省¥5,000-8,000。海鲜火锅点餐复杂（选锅底+选海鲜+选做法），扫码点餐可提升翻台率15%。</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">2</div>
+      <div class="feature-content">
+        <h4>团购核销 · 全渠道自动对账</h4>
+        <p>美团/点评/抖音团购券统一核销，系统自动区分渠道来源。支持"到店核销自动触发好评弹窗引导"，替代人工核销+手写记录，月底对账时间从半天缩短至10分钟。</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">3</div>
+      <div class="feature-content">
+        <h4>外卖接单 · 海鲜包装专项</h4>
+        <p>美团外卖+饿了么双平台自动接单，后厨分单打印。海鲜品类特殊：设置"海鲜打包"专属备注模板（保冷/汤底分离/蘸料分装），减少因包装问题导致的差评，差评率可降低30%。</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">4</div>
+      <div class="feature-content">
+        <h4>会员管理 · 高客单价锁客体系</h4>
+        <p>支持三级会员+储值卡+次卡：储值「充1,000送200」锁定高端客群；次卡「¥688吃5次海鲜锅」降低复购门槛。系统自动标记"高价值客群"（月消费3次以上），触发定向优惠券发放。</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">5</div>
+      <div class="feature-content">
+        <h4>经营报表 · 海鲜成本实时监控</h4>
+        <p>实时查看海鲜品类销售占比、毛利分析、损耗率。海鲜成本波动大（受季节影响），系统自动对比"采购价 vs 售价"利润率，低于警戒线自动预警，辅助老板做定价调整。</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">6</div>
+      <div class="feature-content">
+        <h4>厨房KDS · 海鲜出餐时效管理</h4>
+        <p>海鲜火锅对"活鲜现杀→上桌"时效要求极高。KDS系统自动计时，超时预警（如"海鲜拼盘"超15分钟未出自动提醒）。保障"活鲜现做"的体验承诺，提升顾客满意度。</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">7</div>
+      <div class="feature-content">
+        <h4>预定排队 · 商务宴请优先</h4>
+        <p>支持在线预订包间/大桌，海鲜火锅以4-6人聚餐为主（占比约65%）。系统可提前收集"忌口/海鲜过敏"信息，到店后厨房自动打印标注，提升商务宴请和专业度感知。</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">8</div>
+      <div class="feature-content">
+        <h4>营销工具 · 趣味抽奖引流</h4>
+        <p>结账后收银屏弹"幸运大转盘"：奖品含「下次免费锅底」「续一份活虾」「满200减30」等。参与率可达70%，带动复购率提升25%。系统自动统计中奖核销率，优化奖品设置。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: 策略框架 -->
+<section id="strategy" class="section">
+  <h2 class="section-title">🎯 整体策略框架</h2>
+  <p class="section-subtitle">"稳4.6 · 提复购 · 破淡季" 三轮驱动</p>
+
+  <div class="timeline">
+    <div class="timeline-item" data-step="1">
+      <h3>📌 第一轮 · 稳评分（第1-4周）</h3>
+      <p><strong>目标：</strong>评分稳定4.6，向4.7冲刺</p>
+      <ul>
+        <li><strong>好评引导SOP：</strong>结账时收银自动弹"收藏打卡送海鲜拼盘"（注意：禁"好评返现"，用"收藏打卡"话术）</li>
+        <li><strong>差评30分钟响应：</strong>美团收银监控差评提醒→店长30分钟内回复+电话致歉+赠券补偿</li>
+        <li><strong>典型差评预案：</strong>"海鲜不新鲜"→立即联系顾客补发/退单→评论回复："非常抱歉，已加强海鲜品控，欢迎下次监督"</li>
+        <li><strong>好评置顶引导：</strong>引导顾客写带图优质好评（海鲜锅底上桌照），提升评价质量分</li>
+      </ul>
+    </div>
+    <div class="timeline-item" data-step="2">
+      <h3>📌 第二轮 · 提复购（第5-12周）</h3>
+      <p><strong>目标：</strong>月复购率从当前提升至25%+</p>
+      <ul>
+        <li><strong>会员储值：</strong>充1,000送200（锁定高端客群）/ 充500送80（轻量参与）</li>
+        <li><strong>次卡锁客：</strong>「¥688吃5次海鲜锅底套餐」（有效期6个月，折合¥137.6/次，比单点省40%）</li>
+        <li><strong>社群运营：</strong>建立"小渔大海·老客群"，每日活鲜到货播报+限时秒杀</li>
+        <li><strong>生日特权：</strong>会员生日送「招牌海鲜拼盘」一份（成本约¥60，带动2-3位亲友同行消费）</li>
+      </ul>
+    </div>
+    <div class="timeline-item" data-step="3">
+      <h3>📌 第三轮 · 破淡季（第13-24周·夏季）</h3>
+      <p><strong>目标：</strong>夏季营收不低于冬季的70%</p>
+      <ul>
+        <li><strong>冰镇海鲜季：</strong>推出"冰镇海鲜塔"（¥168/份）+ 精酿啤酒套餐（¥88/2杯），打造夏季爆款</li>
+        <li><strong>夜宵场景：</strong>延长营业至凌晨1点，推出"深夜海鲜·半价锅底"（22:00后）</li>
+        <li><strong>外卖爆品：</strong>"海鲜麻辣香锅"外送（避开火锅外卖痛点），搭配冰啤酒，成为夏季外卖新增长点</li>
+        <li><strong>抖音探店：</strong>合作天津本地美食达人（3-5位），内容聚焦"冰镇海鲜+高空露台"视觉冲击</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: 团购运营 -->
+<section id="group" class="section" style="background:linear-gradient(180deg, #fff 0%, var(--cream) 100%);border-radius:40px;">
+  <h2 class="section-title">🛒 全平台团购套餐设计</h2>
+  <p class="section-subtitle">针对海鲜火锅的高客单价特性，设计引流→锁客→利润三层套餐体系</p>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="pricing-name">🎣 引流款</div>
+      <div class="pricing-price">¥88 <small>双人</small></div>
+      <div class="pricing-desc">海鲜锅底+蔬菜拼盘+主食2份<br>≈7折 · 首次体验门槛</div>
+      <div class="pricing-tags">
+        <span>美团专享</span>
+        <span>限新客</span>
+        <span>工作日午市</span>
+      </div>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-name">🦐 主推爆款</div>
+      <div class="pricing-price">¥258 <small>2-3人</small></div>
+      <div class="pricing-desc">海鲜拼盘(虾蟹贝)+锅底+蔬菜+饮品<br>≈8折 · 主力引流核销</div>
+      <div class="pricing-tags">
+        <span>美团/点评/抖音</span>
+        <span>高性价比</span>
+        <span>到店加购率高</span>
+      </div>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-name">🦞 利润款</div>
+      <div class="pricing-price">¥498 <small>4-6人</small></div>
+      <div class="pricing-desc">豪华海鲜塔+锅底+肉品+酒水<br>≈85折 · 家庭聚餐/商务</div>
+      <div class="pricing-tags">
+        <span>点评专享</span>
+        <span>包间适用</span>
+        <span>高客单价</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid" style="margin-top:2rem;">
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h3>抖音运营</h3>
+      <p><strong>内容方向：</strong>活海鲜现捞现杀过程（视觉冲击）+ 海鲜锅底沸腾瞬间（食欲感）+ 冰镇海鲜塔夏季特辑<br>
+      <strong>达人策略：</strong>3位本地美食号（5-10万粉）+ 1位头部（30万+），视频挂团购链接<br>
+      <strong>投放预算：</strong>¥3,000-5,000/月（含达人置换+cpm投流）</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⭐</div>
+      <h3>点评星级运营</h3>
+      <p><strong>收藏打卡：</strong>到店顾客引导收藏门店+打卡发图→送「海鲜小拼盘」一份（成本¥15）<br>
+      <strong>优质评价引导：</strong>提示顾客写"菜品/服务/环境"三要素带图评价（提高评价质量分，影响排名权重）<br>
+      <strong>极速回复：</strong>所有评价24小时内回复，带情感温度（非模板化）</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏪</div>
+      <h3>美团外卖运营</h3>
+      <p><strong>品类延伸：</strong>不卖火锅外卖（不适合），转为卖"海鲜麻辣香锅""海鲜粥""椒盐皮皮虾"等适合外送的品类<br>
+      <strong>满减策略：</strong>满50减8 / 满100减20 / 满150减35<br>
+      <strong>时段套餐：</strong>午市"单人海鲜饭¥29.9"、晚市"双人海鲜煲¥68"</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: 私域会员 -->
+<section id="private" class="section">
+  <h2 class="section-title">🔐 私域会员 · 高客单价锁客体系</h2>
+  <p class="section-subtitle">海鲜火锅客单价高，必须用会员体系锁住每一次消费</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">🥇</div>
+      <h3>黄金会员 · 储值锁客</h3>
+      <p><strong>充1,000送200</strong>（相当于83折）<br>
+      <strong>充500送80</strong>（相当于86折）<br>
+      储值金额可用于所有消费（含团购补差价）<br>
+      <span class="tag">预计储值渗透率25%，月均锁资¥6万+</span></p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎟️</div>
+      <h3>次卡 · 降低复购门槛</h3>
+      <p><strong>¥688吃5次海鲜锅底套餐</strong>（有效期6个月）<br>
+      <strong>¥388吃3次双人海鲜锅</strong>（有效期3个月）<br>
+      次卡比单次省35-40%，大幅降低"¥114人均"的心理门槛<br>
+      <span class="tag">次卡核销率可达60%+</span></p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💎</div>
+      <h3>钻石会员 · 尊享服务</h3>
+      <p>累计消费满¥5,000自动升级<br>
+      权益：包间优先预定 / 生日宴免费布置 / 新品品鉴邀请 / 专属客服<br>
+      高净值客群维护，带动口碑裂变<br>
+      <span class="tag">锁定前20%的高价值客群</span></p>
+    </div>
+    <div class="card">
+      <div class="card-icon">👥</div>
+      <h3>社群运营 · 每日活鲜播报</h3>
+      <p>建立「小渔大海·鲜友群」<br>
+      <strong>日常内容：</strong>每日到货海鲜实拍（活蹦乱跳的虾/蟹）+ 今日推荐菜 + 限时秒杀<br>
+      <strong>互动活动：</strong>每周五"海鲜盲盒"（¥68随机海鲜拼盘原价¥120+）<br>
+      <span class="tag">目标3个月建群500人</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: 淡季破局 -->
+<section id="season" class="section" style="background:linear-gradient(135deg, #0B2B3C 0%, #1A5A5A 100%);border-radius:40px;color:#fff;">
+  <h2 class="section-title" style="color:#fff;">🌊 夏季淡季 · 破局策略</h2>
+  <p class="section-subtitle" style="color:rgba(255,255,255,0.6);">海鲜火锅≠只有冬天能吃！夏季3大引擎破局</p>
+
+  <div class="card-grid">
+    <div class="card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);">
+      <div class="card-icon" style="font-size:2.5rem;">🧊</div>
+      <h3 style="color:#fff;">引擎一 · 冰镇海鲜季</h3>
+      <p style="color:rgba(255,255,255,0.7);">
+        推出「冰镇海鲜塔」¥168（含活虾/鲍鱼/扇贝/生蚝，冰盘呈列）<br>
+        搭配精酿啤酒套餐 ¥88/2杯<br>
+        夏季限定菜品：捞汁小海鲜、冰镇海螺、芥末章鱼<br>
+        <strong style="color:var(--gold);">策略：</strong>"冬天吃海鲜火锅，夏天吃冰镇海鲜"——打造全年无淡季的认知
+      </p>
+    </div>
+    <div class="card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);">
+      <div class="card-icon" style="font-size:2.5rem;">🌙</div>
+      <h3 style="color:#fff;">引擎二 · 夜宵场景</h3>
+      <p style="color:rgba(255,255,255,0.7);">
+        延长营业至凌晨1:00（周五六至2:00）<br>
+        22:00后「锅底半价」+ 精酿买一送一<br>
+        梅江区域夜宵选择少，抢占空白市场<br>
+        <strong style="color:var(--gold);">目标：</strong>夜宵时段营收占比达到20%+<br>
+        ⚠️ 需确认商场物业是否允许延时营业
+      </p>
+    </div>
+    <div class="card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);">
+      <div class="card-icon" style="font-size:2.5rem;">📦</div>
+      <h3 style="color:#fff;">引擎三 · 外卖爆品</h3>
+      <p style="color:rgba(255,255,255,0.7);">
+        <strong>核心SKU：</strong>海鲜麻辣香锅（¥68/双人）、海鲜粥（¥38/份）、椒盐皮皮虾（¥58/份）<br>
+        夏季外卖增长期，海鲜外卖客单价可达¥60-80<br>
+        配合美团满减活动冲排名<br>
+        <strong style="color:var(--gold);">目标：</strong>外卖月销300+单，营收¥2万+/月
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: KPI -->
+<section id="budget" class="section">
+  <h2 class="section-title">💰 预算与KPI目标</h2>
+  <p class="section-subtitle">90天升级周期，分三阶段落地</p>
+
+  <div class="data-row">
+    <div class="data-item">
+      <div class="data-number">4.7</div>
+      <div class="data-label">90天评分目标</div>
+    </div>
+    <div class="data-item">
+      <div class="data-number">25%</div>
+      <div class="data-label">月复购率</div>
+    </div>
+    <div class="data-item">
+      <div class="data-number">¥6万+</div>
+      <div class="data-label">月储值锁定资金</div>
+    </div>
+    <div class="data-item">
+      <div class="data-number">500人</div>
+      <div class="data-label">社群规模</div>
+    </div>
+    <div class="data-item">
+      <div class="data-number">300+</div>
+      <div class="data-label">月团购核销单</div>
+    </div>
+    <div class="data-item">
+      <div class="data-number">70%+</div>
+      <div class="data-label">团购核销率</div>
+    </div>
+  </div>
+
+  <div class="kpi-bar" style="margin-top:2rem;">
+    <h3 style="color:var(--navy);margin-bottom:1.5rem;">📊 分阶段KPI</h3>
+    <div class="kpi-item">
+      <div class="kpi-label"><span>第1-4周 · 稳评分</span><span>收藏300+ · 好评新增50条+</span></div>
+      <div class="kpi-track"><div class="kpi-fill" style="width:33%"></div></div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label"><span>第5-12周 · 提复购</span><span>储值会员200+ · 次卡核销率60%+</span></div>
+      <div class="kpi-track"><div class="kpi-fill" style="width:66%"></div></div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label"><span>第13-24周 · 破淡季</span><span>夏季营收回暖 · 夜宵占比20%+</span></div>
+      <div class="kpi-track"><div class="kpi-fill" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:16px;padding:2rem;margin-top:2rem;box-shadow:0 2px 15px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.04);">
+    <h3 style="color:var(--navy);margin-bottom:1rem;">📋 首月预算明细</h3>
+    <div class="feature-item" style="margin-bottom:0.5rem;">
+      <div class="feature-num" style="background:linear-gradient(135deg, var(--coral), var(--gold));">1</div>
+      <div class="feature-content" style="display:flex;justify-content:space-between;width:100%;">
+        <h4 style="font-size:0.9rem;">美团智能收银系统</h4>
+        <span style="font-weight:700;color:var(--coral);">¥0（首年免费）</span>
+      </div>
+    </div>
+    <div class="feature-item" style="margin-bottom:0.5rem;">
+      <div class="feature-num" style="background:linear-gradient(135deg, var(--coral), var(--gold));">2</div>
+      <div class="feature-content" style="display:flex;justify-content:space-between;width:100%;">
+        <h4 style="font-size:0.9rem;">抖音探店（3位达人）</h4>
+        <span style="font-weight:700;color:var(--coral);">¥3,000-5,000</span>
+      </div>
+    </div>
+    <div class="feature-item" style="margin-bottom:0.5rem;">
+      <div class="feature-num" style="background:linear-gradient(135deg, var(--coral), var(--gold));">3</div>
+      <div class="feature-content" style="display:flex;justify-content:space-between;width:100%;">
+        <h4 style="font-size:0.9rem;">团购拍摄（菜品精修图+视频）</h4>
+        <span style="font-weight:700;color:var(--coral);">¥1,500-2,500</span>
+      </div>
+    </div>
+    <div class="feature-item" style="margin-bottom:0.5rem;">
+      <div class="feature-num" style="background:linear-gradient(135deg, var(--coral), var(--gold));">4</div>
+      <div class="feature-content" style="display:flex;justify-content:space-between;width:100%;">
+        <h4 style="font-size:0.9rem;">社群运营（福利品+活动物料）</h4>
+        <span style="font-weight:700;color:var(--coral);">¥800-1,200</span>
+      </div>
+    </div>
+    <div class="feature-item" style="margin-bottom:0.5rem;">
+      <div class="feature-num" style="background:linear-gradient(135deg, var(--coral), var(--gold));">5</div>
+      <div class="feature-content" style="display:flex;justify-content:space-between;width:100%;">
+        <h4 style="font-size:0.9rem;">DM单/地推物料（梅江社区）</h4>
+        <span style="font-weight:700;color:var(--coral);">¥500-800</span>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:1rem 0;margin-top:0.5rem;border-top:2px dashed var(--gold);font-size:1.1rem;">
+      <span style="font-weight:600;">📌 首月总预算</span>
+      <span style="font-weight:900;color:var(--coral);">约 ¥5,800-9,500</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: 总结 -->
+<section id="summary" class="section" style="background:linear-gradient(180deg, var(--cream) 0%, #fff 100%);border-radius:40px 40px 0 0;">
+  <h2 class="section-title">📝 方案总结</h2>
+  <p class="section-subtitle">小渔大海水产火锅（梅江店） · 升级营销行动纲领</p>
+
+  <div style="background:#fff;border-radius:16px;padding:2.5rem;box-shadow:0 2px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;">
+      <div>
+        <h4 style="color:var(--navy);margin-bottom:0.8rem;">🎯 核心目标</h4>
+        <ul style="padding-left:1.2rem;color:var(--text-light);font-size:0.9rem;">
+          <li style="margin-bottom:0.3rem;">评分稳4.6 → 冲4.7</li>
+          <li style="margin-bottom:0.3rem;">月复购率提升至25%+</li>
+          <li style="margin-bottom:0.3rem;">夏季营收达冬季70%+</li>
+          <li style="margin-bottom:0.3rem;">私域会员锁资¥6万+/月</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:var(--navy);margin-bottom:0.8rem;">💡 核心策略</h4>
+        <ul style="padding-left:1.2rem;color:var(--text-light);font-size:0.9rem;">
+          <li style="margin-bottom:0.3rem;">收银赋能 · 8大模块降本增效</li>
+          <li style="margin-bottom:0.3rem;">团购三层体系 · 引流→锁客→利润</li>
+          <li style="margin-bottom:0.3rem;">淡季破局 · 冰镇海鲜+夜宵+外卖</li>
+          <li style="margin-bottom:0.3rem;">会员体系 · 储值+次卡+社群锁客</li>
+        </ul>
+      </div>
+    </div>
+    <div style="background:linear-gradient(135deg, rgba(42,157,143,0.05), rgba(231,111,81,0.05));border-radius:12px;padding:1.5rem;border:1px solid rgba(42,157,143,0.1);">
+      <h4 style="color:var(--navy);margin-bottom:0.5rem;">📌 一句话给老板</h4>
+      <p style="color:var(--text-light);font-size:0.95rem;">
+        "小渔大海评分4.6已经是优秀水平，但不是天花板。装上美团智能收银后，<strong style="color:var(--teal);">扫码点餐省人工、会员体系锁复购、经营报表控成本</strong>，配合夏季冰镇海鲜+夜宵破局，一年四季都赚钱。如果10月天津梅江会展中心有火锅食材展，正是小渔大海刷存在感的好时机！"
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>本方案由 <strong>娄苏 · 业务开发-地面产品销售</strong> 出品</p>
+  <p style="margin-top:0.5rem;">美团智能收银 · 助力餐饮商家数字化升级</p>
+  <p style="margin-top:0.3rem;font-size:0.75rem;opacity:0.5;">小渔大海水产火锅（梅江店）· 升级营销全案 · 2026</p>
+</footer>
+
+<script>
+// Intersection Observer for fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Nav highlight on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 100;
+    if (window.scrollY >= top) current = section.getAttribute('id');
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>
